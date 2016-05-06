@@ -27,6 +27,10 @@ function redirect_to( $location = NULL ) {
 function confirm_query($result_set) {
     if (!$result_set) {
         die("Database query failed: " . mysql_error());
+          return false;
+    }
+    else{
+      return true;
     }
 }
 

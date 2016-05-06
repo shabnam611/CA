@@ -34,7 +34,7 @@
         if(!confirm_logged_in()){
         ?>
         <ul class="nav navbar-nav navbar-right">
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#SignupModal">Sign up</button>
+          <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#SignupModal">Sign up</button>
 
           <!-- Modal -->
           <div id="SignupModal" class="modal fade" role="dialog">
@@ -50,17 +50,16 @@
                   <div class = "loginForm">
                     <form role="form" action="signUp.php" method="post">
                       <div class="form-group">
-                        <input id="stdname" class='form-control' type= "text" placeholder = "name">
+                        <input id="username" name="username" class='form-control' type= "text" placeholder = "name" required>
                       </div>
                       <div class="form-group">
-                        <input id="passwd" class='form-control' type= "password" placeholder = "password">
+                        <input id="passwd" name="passwd" class='form-control' type= "password" placeholder = "password" required>
                       </div>
                       <div class="form-group">
-                        <input id="conf_pass" class='form-control' type= "password" placeholder = "confirm password">
+                        <input id="conf_pass" name="conf_pass"class='form-control' type= "password" placeholder = "confirm password" required>
                       </div>
 
-                      <input class=" btn btn-default" type= "submit" placeholder="submit"><br>
-                      <br>
+                      <input class = "btn-info" name="signup"class=" btn btn-default" type= "submit" value="SignUp"><br>
                     </form>
                   </div>
                 </div>
@@ -71,7 +70,7 @@
 
             </div>
           </div>
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#LoginModal">Login</button>
+          <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#LoginModal">Login</button>
 
           <!-- Modal -->
           <div id="LoginModal" class="modal fade" role="dialog">
@@ -81,7 +80,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title"></h4>
+                  <h4 class="modal-title">Welcome back!</h4>
                 </div>
                 <div class="modal-body">
                   <form action="login.php" method="post">
@@ -89,6 +88,8 @@
                     <br>
                     <input type= "password" placeholder = "password"><br>
                     <br>
+                    <input type= "submit" value="Go"><br>
+
                   </form>
                 </div>
                 <div class="modal-footer">
