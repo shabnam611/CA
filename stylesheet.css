@@ -1,0 +1,34 @@
+
+table, th, td {
+  border: 1px solid black;
+  padding: 5%;
+  margin:auto;
+}
+
+h1{
+ text-align: center;
+}
+
+.section{
+    float:left;
+    padding:10%;
+}
+
+.menubar{
+
+}
+
+.loginForm{
+  padding: 1%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+}
+
+.section{
+  position: absolute;
+}
+.extra{
+  text-align: center;
+}
