@@ -1,5 +1,9 @@
 <?php
-  include("session.php");
+
+  include_once("error.php");
+  include_once("session.php");
+
+
 ?>
 <!DOCTYPE html>
 <head>
@@ -83,13 +87,12 @@
                   <h4 class="modal-title">Welcome back!</h4>
                 </div>
                 <div class="modal-body">
-                  <form action="login.php" method="post">
-                    <input type= "text" placeholder = "name"><br>
+                  <form role="form" action="login.php" method="post">
+                    <input type= "text" placeholder = "name" name="username" required><br>
                     <br>
-                    <input type= "password" placeholder = "password"><br>
+                    <input type= "password" placeholder = "password" name="password" required><br>
                     <br>
-                    <input type= "submit" value="Go"><br>
-
+                    <input type= "submit" value="log in" class="btn btn-info btn-md" name="login"><br>
                   </form>
                 </div>
                 <div class="modal-footer">
@@ -106,14 +109,16 @@
         else{
 
           ?>
+
           <ul class="nav navbar-nav navbar-right">
-          <a href="#" class="btn btn-info btn-lg">
+        <form role="form" action="login.php" method="post">
+          <button  class="btn btn-info btn-md" name="logout">
           <span class="glyphicon glyphicon-log-out"></span> Log out
-          </a>
+        </button>
+        </form>
           </ul>
           <?php
         }
-
         ?>
       </div>
     </div>

@@ -2,7 +2,7 @@
 session_start();
 
 function logged_in() {
-    return (isset($_SESSION['user_id'])||isset($_SESSION['admin_id']));
+    return (isset($_SESSION['logged_in']));
 }
 
 function confirm_logged_in() {
