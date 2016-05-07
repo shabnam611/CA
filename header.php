@@ -33,24 +33,27 @@
           <!--<li><a href="results.php">Result</a></li>-->
           <li><a href="other.php">Other</a></li>
           <?php
-          if($_SESSION['user_type']==0){
+            if(confirm_logged_in()){
+              if($_SESSION['user_type']=='0')
+              {
+                ?>
+                <li><a href="students_profile.php">Profile</a></li>
+                <?php
+              }
+              else if($_SESSION['user_type']=='1')
+              {
+                ?>
+                <li><a href="update_T.php">Update</a></li>
+                <?php
+              }
+              else if($_SESSION['user_type']=='2')
+              {
+                ?>
+                <li><a href="update_OA.php">Update</a></li>
+                <?php
+              }
+            }
             ?>
-            <?php
-            <li><a href="students_profile.php">Profile</a></li>
-             ?>
-          }
-          else if($_SESSION['user_type']==1){
-            ?>
-            <?php
-            <li><a href="update_T.php">Update</a></li>
-             ?>
-          }
-          else if($_SESSION['user_type']==2){
-            ?>
-            <?php
-            <li><a href="update_OA.php">Update</a></li>
-             ?>
-          }
         </ul>
         <?php
         if(!confirm_logged_in()){

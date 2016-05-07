@@ -2,7 +2,7 @@
 include("header.php");
 ?>
 
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#subjectModal">Choose Subject</button>
+<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#subjectModal">Choose Subject</button>
 
 <!-- Modal -->
 <div id="subjectModal" class="modal fade" role="dialog">
@@ -50,7 +50,7 @@ include("header.php");
 
 </br>
 </br>
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#midtermMarks">Add midterm marks</button>
+  <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#midtermMarks">Add midterm marks</button>
 
 <!-- Modal -->
 <div id="midtermMarks" class="modal fade" role="dialog">
@@ -87,7 +87,7 @@ include("header.php");
 
   </div>
 </div>
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add final marks</button>
+  <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Add final marks</button>
 
   <!-- Modal -->
   <div id="myModal" class="modal fade" role="dialog">

@@ -27,6 +27,7 @@ if(isset($_POST["signup"])){
         mysqli_query($connection,$sql);
         session_start();
         $_SESSION['logged_in']="1";
+        $_SESSION['user_type']=NULL;
         redirect_to("index.php");
       }
     else{
