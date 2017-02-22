@@ -3,7 +3,6 @@
   include_once("error.php");
   include_once("session.php");
 
-
 ?>
 <!DOCTYPE html>
 <head>
@@ -11,8 +10,7 @@
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <title>home</title>
 </head>
 <body>
@@ -31,7 +29,7 @@
         <ul class="nav navbar-nav">
           <li><a href="index.php">Home</a></li>
           <!--<li><a href="results.php">Result</a></li>-->
-          <li><a href="other.php">Other</a></li>
+          <!--<li><a href="other.php">Other</a></li>-->
           <?php
             if(confirm_logged_in()){
               if($_SESSION['user_type']=='0')
@@ -72,21 +70,15 @@
                   <h4 class="modal-title">Thank you for signing up: </h4>
                 </div>
                 <div class="modal-body">
-                  <div class = "loginForm">
                     <form role="form" action="signUp.php" method="post">
-                      <div class="form-group">
                         <input id="username" name="username" class='form-control' type= "text" placeholder = "name" required>
-                      </div>
-                      <div class="form-group">
+                        <br>
                         <input id="passwd" name="passwd" class='form-control' type= "password" placeholder = "password" required>
-                      </div>
-                      <div class="form-group">
+                        <br>
                         <input id="conf_pass" name="conf_pass"class='form-control' type= "password" placeholder = "confirm password" required>
-                      </div>
-
-                      <input class = "btn-info" name="signup"class=" btn btn-default" type= "submit" value="SignUp"><br>
+                        <br>
+                        <input class = "btn btn-info btn-md" name="signup" type= "submit" value="Sign Up"><br>
                     </form>
-                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -109,11 +101,11 @@
                 </div>
                 <div class="modal-body">
                   <form role="form" action="login.php" method="post">
-                    <input type= "text" placeholder = "name" name="username" required><br>
+                    <input type= "text" class='form-control' placeholder = "name" name="username" required><br>
                     <br>
-                    <input type= "password" placeholder = "password" name="password" required><br>
+                    <input type= "password" class='form-control' placeholder = "password" name="password" required><br>
                     <br>
-                    <input type= "submit" value="log in" class="btn btn-info btn-md" name="login"><br>
+                    <input type= "submit" value="Log In" class="btn btn-info btn-md" name="login"><br>
                   </form>
                 </div>
                 <div class="modal-footer">

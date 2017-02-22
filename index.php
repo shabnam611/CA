@@ -1,26 +1,32 @@
 <?php
-include("header.php");
+include_once("header.php");
+
+include_once("connection.php");
+include_once("form_functions.php");
+include_once("functions.php");
+
+
 ?>
 <div class="table-responsive">
- <table class="table">
+  <h1>Notice Board</h1>
+ <table class="notice table table-striped table-responsive">
    <tr>
-     <th>Description</th>
      <th>Date</th>
-     <th>Published by</th>
-     <th>Concerned Batch</th>
+     <th>Description</th>
    </tr>
-   <tr>
-     <td>MSc class of 2009-2010 session has been started</td>
-     <td>3/2/2016</td>
-     <td>Chairman</td>
-     <td>1st</td>
-   </tr>
-   <tr>
-     <td>Winter vacation has been anounced from 14th December 2015 to 2nd January 2016</td>
-     <td>10/12/2015</td>
-     <td>VC</td>
-     <td>N/A</td>
-   </tr>
+   <?php
+    $sql="SELECT * FROM notice ORDER BY published DESC";
+    $result=mysqli_query($connection,$sql);
+    while($row=mysqli_fetch_assoc($result))
+    {
+      ?>
+      <tr>
+      <td><?php echo $row['published'];?></td>
+      <td><?php echo $row['description'];?></td>
+    </tr>
+      <?php
+    }
+   ?>
  </table>
 </div>
 
